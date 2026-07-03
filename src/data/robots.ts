@@ -1,4 +1,4 @@
-import { Robot } from "../types"
+import type { Robot } from "../types"
 
 export const ROBOTS: Robot[] = [
     { id: "rover-001", name: "Aido Rover 001", status: "online"},
