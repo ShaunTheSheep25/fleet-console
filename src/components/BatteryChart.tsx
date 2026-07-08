@@ -21,7 +21,7 @@ export function BatteryChart({ data }: Props) {
         <Tooltip
           contentStyle={{ backgroundColor: '#1f2937', border: 'none', borderRadius: '6px' }}
           labelFormatter={() => 'Battery %'}
-          formatter={(val: number) => [`${val.toFixed(1)}%`, '']}
+          formatter={(val) => [val != null ? `${Number(val).toFixed(1)}%` : 'N/A', '']}
         />
         <Line
           type="monotone"
