@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { AnomalyEvent } from '../types'
 
-const SENTINEL_URL = 'http://localhost:8003'
+const SENTINEL_URL = import.meta.env.VITE_SENTINEL_URL ?? 'http://localhost:8003'
 
 export function EventsPanel() {
   const [events, setEvents] = useState<AnomalyEvent[]>([])

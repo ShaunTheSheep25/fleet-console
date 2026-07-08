@@ -13,7 +13,7 @@ export function TelemetryPanel({ robotId }: Props) {
 
   // Each robot gets its own WS URL — when robotId changes,
   // the hook closes the old socket and opens a new one
-  const wsUrl = `ws://localhost:8000/ws/telemetry?robot=${robotId}`
+  const wsUrl = `${import.meta.env.VITE_AIDO_BRIDGE_WS ?? 'ws://localhost:8000'}/ws/telemetry?robot=${robotId}`
   const { lastMessage, status } = useWebSocket(wsUrl)
 
   // Parse incoming messages
