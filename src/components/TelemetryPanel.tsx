@@ -68,14 +68,14 @@ export function TelemetryPanel({ robotId }: Props) {
       {/* Telemetry readouts */}
       {telemetry ? (
         <div className="grid grid-cols-2 gap-3 mb-4">
-          <ReadoutCard label="Position" value={telemetry.position.toFixed(2)} unit="m" />
-          <ReadoutCard label="Heading" value={telemetry.heading.toFixed(1)} unit="°" />
-          <ReadoutCard
-            label="Battery"
-            value={telemetry.battery.toFixed(1)}
-            unit="%"
-            highlight={telemetry.battery < 20 ? 'red' : telemetry.battery < 40 ? 'yellow' : 'green'}
-          />
+            <ReadoutCard label="Position" value={telemetry.position.toFixed(2)} unit="m" />
+            <ReadoutCard label="Heading" value={telemetry.heading.toFixed(1)} unit="°" />
+            <ReadoutCard
+                label="Battery"
+                value={telemetry.battery.toFixed(1)}
+                unit="%"
+                highlight={telemetry.battery < 20 ? 'red' : telemetry.battery < 40 ? 'yellow' : 'green'}
+            />
         </div>
       ) : (
         <div className="grid grid-cols-2 gap-3 mb-4">
